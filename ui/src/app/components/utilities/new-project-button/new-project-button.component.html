@@ -1,0 +1,10 @@
+<div class="btn-container">
+  <div class="close-btn" (click)="back()">
+    <i class="icon" [ngClass]="backIcon"></i>
+    <button class="btn-cancel">{{ backTitle }}</button>
+  </div>
+  <div class="next-btn" (click)="next()">
+    <button class="btn-next">{{ nextTitle }}</button>
+    <i class="icon" [ngClass]="nextIcon"></i>
+  </div>
+</div>

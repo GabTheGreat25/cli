@@ -1,0 +1,61 @@
+.card-container {
+  padding-top: 0.25rem;
+
+  @screen xl {
+    padding-top: 0;
+  }
+
+  .navbar-wrapper {
+    @apply maya-grid maya-grid-flow-col maya-items-center maya-justify-items-end;
+    padding: 0 5rem;
+    position: relative;
+
+    .dropdown {
+      @apply maya-font-medium maya-text-neutral-500 maya-grid maya-grid-flow-col maya-gap-2 maya-text-xl;
+      cursor: pointer;
+
+      .icon {
+        padding-top: 0.25rem;
+      }
+    }
+    .dropdown-menu {
+      background-color: white;
+      position: absolute;
+      right: -1rem;
+      width: 18rem;
+      border-radius: 0.35rem;
+      margin-top: 1.5rem;
+
+      .dropdown-item {
+        @apply maya-text-left maya-text-neutral-800 maya-grid maya-gap-2 maya-w-full maya-font-medium;
+        grid-template-columns: 2.6rem auto;
+        padding: 0.5rem 1.5rem;
+
+        &:hover {
+          color: #e02f15;
+        }
+
+        em {
+          width: 1.2rem;
+          @apply maya-pt-1;
+        }
+      }
+      .dropdown-divider {
+        margin: 0.1rem 0;
+        overflow: hidden;
+        border: 1px solid #e4e5ec;
+      }
+
+      .toggle-container {
+        @apply maya-text-left maya-text-neutral-800 maya-grid maya-gap-2 maya-w-full maya-font-medium;
+        display: grid;
+        grid-template-columns: 2.5rem 2fr 1fr;
+        padding: 1rem 1.5rem 0.5rem 1.5rem;
+
+        &:hover {
+          color: #e02f15;
+        }
+      }
+    }
+  }
+}

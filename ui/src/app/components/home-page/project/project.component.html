@@ -1,0 +1,35 @@
+<section class="home-container">
+  <div class="home-wrapper">
+    <div class="list">
+      <section class="create-container" *ngIf="projects.length === 0">
+        <div class="create-wrapper">
+          <h1 class="create-title">Create your new project</h1>
+          <div class="create-info">Let’s start with your first project.</div>
+          <div class="create-info">Click <span class="sub-info"> “Create a new project here”</span> to start .</div>
+          <div class="add-logo">
+            <img class="logo-file" [src]="addFile" alt="addFile" />
+          </div>
+          <create-button [route]="route" [projectName]="projectName" [projectLogo]="projectLogo"></create-button>
+        </div>
+      </section>
+
+      <div class="card" *ngFor="let project of projects">
+        <div class="card-container">
+          <div class="icon-wrapper icons" (click)="onFavorite(project)">
+            <div class="round" [ngClass]="project.favorite ? 'round' : 'outline'">
+              <em [ngClass]="project.favorite ? 'las la-star' : 'lar la-star'"></em>
+            </div>
+          </div>
+          <div class="app-info">
+            <span class="app-name">{{ project.name }}</span>
+            <div class="sub-info">{{ project.info }}</div>
+          </div>
+          <span class="icons">
+            <em class="las la-upload"></em>
+            <em class="las la-window-close"></em>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

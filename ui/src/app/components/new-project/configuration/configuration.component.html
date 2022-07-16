@@ -1,0 +1,41 @@
+<pop-up *ngIf="isOpen" [title]="title" (onClose)="close()">
+  <div popup-body>
+    <pop-up-input [icon]="icon" [infoTitle]="infoTitle" [title]="popupTitle" [info]="info"></pop-up-input>
+  </div>
+  <div popup-buttons>
+    <pop-up-preset [continueTitle]="continueTitle" [createTitle]="createTitle" (onNext)="next()"></pop-up-preset>
+  </div>
+</pop-up>
+<section class="configuration-container">
+  <div class="configuration-card">
+    <div class="configuration-card-container">
+      <p class="configuration-title">Pick a linter / formatter Config:</p>
+      <div class="payment-container">
+        <select class="dropdown">
+          <option selected disabled hidden>ESLint with error prevention only</option>
+          <option class="option">Option 1</option>
+          <option class="option">Option 2</option>
+          <option class="option">Last long option</option>
+        </select>
+      </div>
+    </div>
+    <p class="lint-title">Pick additional lint features:</p>
+    <div class="switch-container">
+      <switch></switch>
+      <p class="switch-title">Lint on save</p>
+    </div>
+    <div class="switch-container">
+      <switch></switch>
+      <p class="switch-title">Lint and fix on commit</p>
+    </div>
+
+    <new-project-button
+      (onBack)="back()"
+      [backTitle]="backTitle"
+      [nextTitle]="nextTitle"
+      [backIcon]="backIcon"
+      [nextIcon]="nextIcon"
+      (click)="open()"
+    ></new-project-button>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+.btn-container {
+  @apply maya-grid-flow-col maya-pt-3;
+  display: grid;
+  grid-column: 2/3;
+  justify-content: center;
+
+  .btn-create {
+    @apply maya-font-light;
+    padding: 0 1rem;
+    color: white;
+    background-color: #e02f15cc;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+
+    .icon {
+      font-size: 1.65rem;
+    }
+
+    .btn-title {
+      @apply maya-pt-2;
+    }
+  }
+}

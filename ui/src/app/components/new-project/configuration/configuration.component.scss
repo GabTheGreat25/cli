@@ -1,0 +1,105 @@
+.configuration-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  width: 100%;
+  height: 20%;
+
+  .configuration-card {
+    grid-column: 2/3;
+    padding: 0.75rem 0;
+
+    .configuration-card-container {
+      background-color: #949494;
+      width: 100%;
+      height: fit-content;
+      border: none;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 1rem;
+      display: grid;
+      grid-template-columns: 0.45fr 0.55fr;
+      gap: 1rem;
+      padding: 0.25rem 2rem;
+
+      @screen lg {
+        grid-template-columns: repeat(2, 0.5fr);
+      }
+
+      @screen xl {
+        grid-template-columns: 0.8fr 0.45fr;
+      }
+
+      .configuration-title {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        color: white;
+
+        @screen lg {
+          font-size: 1.1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .payment-container {
+        position: relative;
+        display: grid;
+        padding: 0.25rem 0;
+
+        .dropdown {
+          @apply maya-text-primary-neutral-dark;
+          outline: none;
+          width: 100%;
+          padding: 0 1rem;
+          background-color: #dedede;
+          height: 3rem;
+          display: grid;
+          border-radius: 0.5rem;
+          font-size: 0.9rem;
+          appearance: none;
+          cursor: pointer;
+
+          @screen lg {
+            font-size: 1.1rem;
+          }
+        }
+
+        .option {
+          @apply maya-text-primary-neutral-dark;
+          background-color: white;
+          font-size: 1.1rem;
+          width: fit-content;
+        }
+      }
+
+      .payment-container:after {
+        @apply maya-text-primary-neutral-dark;
+        content: "\f078";
+        font: 1.25rem/1 FontAwesome;
+        right: 1rem;
+        top: 0.1rem;
+        padding: 0.9rem 0 0 0.25rem;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      select::-ms-expand {
+        display: none;
+      }
+    }
+
+    .lint-title {
+      @apply maya-pt-6 maya-pb-3 maya-font-semibold maya-text-lg;
+    }
+
+    .switch-container {
+      display: grid;
+      grid-template-columns: 5rem 1fr;
+      padding: 1rem 0;
+
+      .switch-title {
+        @apply maya-font-semibold maya-text-lg;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

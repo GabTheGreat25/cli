@@ -1,0 +1,38 @@
+<card class="card-container">
+  <div card-wrapper>
+    <ul class="navbar-wrapper">
+      <li>
+        <button (click)="onHide()" class="dropdown">
+          <p>mayajs</p>
+          <i class="las la-caret-down icon"></i>
+        </button>
+        <div class="dropdown-menu" *ngIf="isHidden">
+          <button class="toggle-container">
+            <em class="las la-star la-lg"></em>
+            Toggle Favourite <switch></switch>
+          </button>
+          <hr class="dropdown-divider" />
+          <button class="dropdown-item">
+            <em class="las la-chevron-up la-lg"></em>
+            Open in editor
+          </button>
+          <hr class="dropdown-divider" />
+          <button class="dropdown-item">
+            <em class="las la-pencil-alt la-lg"></em>
+            Rename
+          </button>
+          <hr class="dropdown-divider" />
+          <button class="dropdown-item" (click)="home()">
+            <em class="las la-home la-lg"></em>
+            Mayajs Project Manager
+          </button>
+          <hr class="dropdown-divider" />
+          <button class="dropdown-item" (click)="about()">
+            <em class="las la-info la-lg"></em>
+            About
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</card>

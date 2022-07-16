@@ -1,0 +1,182 @@
+.home-container {
+  display: grid;
+  height: fit-content;
+  padding: 2rem 2.5rem 2rem 15rem;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+
+  @screen lg {
+    padding: 2rem 2.5rem 2rem 19.5rem;
+  }
+
+  @screen xl {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 2.5rem 2rem 25rem;
+  }
+
+  .welcome-container {
+    padding: 0 1.25rem;
+
+    .welcome-title {
+      @apply maya-font-light;
+      padding-bottom: 1rem;
+    }
+
+    .welcome-wrapper {
+      display: grid;
+      grid-template-rows: 10rem 9rem 1fr;
+      gap: 1rem;
+
+      .logo-container {
+        display: grid;
+        grid-template-rows: 6rem 1fr;
+        justify-items: center;
+
+        .logo-title {
+          text-align: center;
+
+          .node {
+            @apply maya-font-semibold;
+            color: #b40f00;
+          }
+        }
+      }
+
+      .sub-container {
+        display: grid;
+        grid-template-rows: 3rem 1fr;
+
+        .sub-title {
+          @apply maya-font-medium;
+          font-size: 1.5rem;
+          color: #b40f00;
+        }
+
+        .unordered {
+          padding-left: 2rem;
+          list-style-type: circle;
+          line-height: 1.5rem;
+        }
+      }
+
+      .btn-container {
+        display: grid;
+        padding: 1.5rem;
+        justify-items: center;
+
+        .close-btn {
+          display: grid;
+          width: fit-content;
+          grid-template-columns: 3rem 1fr;
+          @apply maya-px-7 maya-py-3 maya-font-medium;
+          background-color: #e02f15;
+          color: white;
+          text-align: center;
+          border-radius: 0.5rem;
+
+          .icon {
+            font-size: 1.75rem;
+            cursor: pointer;
+          }
+
+          .btn-cancel {
+            @apply maya-font-bold maya-text-xl;
+          }
+        }
+      }
+    }
+  }
+
+  .port-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+
+    @screen xl {
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .port-wrapper {
+      padding: 1.75rem 1.25rem;
+
+      .port-title {
+        @apply maya-font-semibold maya-text-xl;
+      }
+
+      .electric-container {
+        padding: 1.5rem 0;
+        display: grid;
+        grid-template-columns: 2.5rem 1fr;
+        gap: 1rem;
+
+        .electric-wrapper {
+          background-color: #dedede;
+          border-radius: 50%;
+          padding: 0.35rem 0;
+        }
+
+        .electric {
+          padding-left: 0.75rem;
+        }
+
+        .electric-title {
+          font-size: 1.1rem;
+          padding-top: 0.5rem;
+        }
+      }
+
+      .network-container {
+        display: grid;
+        grid-template-columns: 2fr auto 1fr;
+        gap: 2rem;
+
+        .network-text {
+          border: 0.12rem solid black;
+          padding: 0.5rem 0 0.5rem 1rem;
+        }
+
+        .btn-electric {
+          grid-column: 3/3;
+          display: grid;
+          grid-template-columns: 1.5rem 3rem;
+          background-color: black;
+          color: white;
+          justify-content: center;
+          cursor: pointer;
+
+          .electric {
+            padding-top: 0.45rem;
+          }
+          .btn-title {
+            @apply maya-font-light;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .task-container {
+      padding: 1.75rem 1.25rem;
+
+      .task-title {
+        @apply maya-font-semibold maya-text-xl;
+      }
+
+      .task-wrapper {
+        padding-top: 0.6rem;
+        display: grid;
+        justify-items: center;
+
+        .wheel {
+          font-size: 7rem;
+        }
+
+        .btn-wheel {
+          background-color: #dedede;
+          padding: 0.25rem 1rem;
+        }
+      }
+    }
+  }
+}

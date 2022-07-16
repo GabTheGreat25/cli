@@ -1,0 +1,44 @@
+.navbar-container {
+  display: grid;
+  grid-template-columns: 25% 1fr auto;
+  align-items: center;
+  padding: 0.5rem 0;
+  justify-items: end;
+
+  @screen lg {
+    grid-template-columns: 28% 1fr auto;
+    justify-items: start;
+  }
+
+  @screen xl {
+    grid-template-columns: 26% 1fr auto;
+  }
+
+  .navbar-name {
+    display: grid;
+    grid-column: 2/3;
+  }
+
+  .navbar-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+
+    @screen xl {
+      grid-template-columns: 1fr auto;
+    }
+  }
+}
+
+.plugin-container {
+  display: grid;
+  padding: 2rem 2.5rem 0 15rem;
+  height: 85%;
+
+  @screen lg {
+    padding: 2rem 2.5rem 0 19.5rem;
+  }
+
+  @screen xl {
+    padding: 2rem 3.5rem 0 25rem;
+  }
+}

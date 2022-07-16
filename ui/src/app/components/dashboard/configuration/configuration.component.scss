@@ -1,0 +1,44 @@
+.configuration-container {
+  display: grid;
+  grid-template-rows: 5rem auto;
+  height: 100%;
+
+  .navbar-container {
+    display: grid;
+    grid-template-columns: 25% 1fr auto;
+    align-items: center;
+    padding: 0.5rem 0;
+    justify-items: end;
+
+    @screen lg {
+      grid-template-columns: 28% 1fr auto;
+      justify-items: start;
+    }
+
+    @screen xl {
+      grid-template-columns: 26% 1fr auto;
+    }
+    .navbar-name {
+      display: grid;
+      grid-column: 2/3;
+    }
+
+    .navbar-wrapper {
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+
+  .side-folder-container {
+    padding-left: 12rem;
+    height: 100%;
+
+    @screen lg {
+      padding-left: 16rem;
+    }
+
+    @screen xl {
+      padding-left: 21rem;
+    }
+  }
+}

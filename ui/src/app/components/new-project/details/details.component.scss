@@ -1,0 +1,230 @@
+.detail-container {
+  @apply maya-grid;
+  align-items: center;
+  height: 67.5vh;
+  display: relative;
+
+  @screen lg {
+    height: 70vh;
+  }
+
+  @screen xl {
+    height: 75vh;
+  }
+
+  .detail-wrapper {
+    position: relative;
+    align-items: center;
+    width: 60%;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0 0.2rem 0.4rem 0.1rem #00000026;
+    @apply maya-grid maya-grid-flow-row maya-rounded-xl maya-mx-auto maya-text-center maya-p-12;
+
+    @screen lg {
+      width: 50%;
+    }
+
+    @screen xl {
+      width: 34%;
+    }
+
+    .detail-title {
+      text-align: start;
+      padding-bottom: 1rem;
+      color: #5d1a0d;
+      font-size: 1.2rem;
+    }
+
+    .project-container {
+      display: grid;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
+      grid-template-columns: 5rem auto;
+
+      .logo {
+        padding-left: 2rem;
+        padding-top: 0.5rem;
+      }
+
+      .info-form-control {
+        position: relative;
+        outline: none;
+        overflow: visible;
+        text-align: left;
+        box-shadow: none;
+        background: rgba(224, 48, 21, 0);
+        border-bottom: 0.1rem solid black;
+        border: none;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        color: #5d1a0d;
+
+        &.ng-invalid.ng-touched {
+          @apply maya-ring-2 maya-ring-opacity-70 maya-ring-red-500;
+        }
+
+        &.ng-valid.ng-touched {
+          @apply maya-ring-2 maya-ring-opacity-70 maya-ring-green-500;
+        }
+      }
+    }
+
+    .icon-container {
+      @apply maya-grid-flow-col;
+      padding-top: 0.25rem;
+      display: grid;
+
+      .icon-title {
+        display: grid;
+        justify-content: start;
+        color: #5d1a0d;
+      }
+
+      .icon-wrapper {
+        display: grid;
+        justify-content: end;
+
+        .icon {
+          background-color: #dedede;
+          border-radius: 0.25rem;
+          padding: 0.35rem 0.2rem;
+          color: #5e738a;
+        }
+      }
+    }
+
+    .payment-container {
+      position: relative;
+      display: grid;
+      padding: 0.25rem 0;
+
+      .payment-title {
+        @apply maya-py-2;
+        text-align: start;
+        color: #5d1a0d;
+        font-size: 1.2rem;
+      }
+
+      .dropdown {
+        margin-top: 1rem;
+        outline: none;
+        width: 100%;
+        padding: 0 1rem;
+        background-color: #e02f15cc;
+        height: 3rem;
+        display: grid;
+        color: white;
+        border-radius: 0.5rem;
+        font-size: 1.1rem;
+        appearance: none;
+        cursor: pointer;
+      }
+
+      .option {
+        background-color: white;
+        color: #e02f15cc;
+        font-size: 1.1rem;
+      }
+    }
+
+    .payment-container:after {
+      content: "\f078";
+      font: 1.25rem/1 FontAwesome;
+      color: white;
+      right: 1rem;
+      top: 3.5rem;
+      padding: 0.9rem 0 0 0.25rem;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    select::-ms-expand {
+      display: none;
+    }
+
+    .additional-title {
+      @apply maya-pt-3 maya-pb-1;
+      color: #5d1a0d;
+      font-size: 1.2rem;
+      text-align: start;
+    }
+
+    .additional-container {
+      display: grid;
+      grid-template-columns: 7fr 1fr;
+
+      .additional-info {
+        color: #5d1a0d;
+        font-size: 1rem;
+        text-align: start;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 3.5rem;
+        height: 1.45rem;
+
+        .checkbox {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #dedede;
+          transition: 0.4s;
+          border-radius: 2.25rem;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 2rem;
+          width: 2rem;
+          right: 1.5rem;
+          bottom: -0.25rem;
+          background-color: #636363;
+          transition: 0.4s;
+          border-radius: 50%;
+        }
+
+        input:checked + .slider {
+          background-color: #e02f15;
+        }
+
+        input:checked + .slider:before {
+          transform: translateX(1.9rem);
+        }
+      }
+    }
+
+    .form-container {
+      padding-top: 1rem;
+
+      .additional-form-control {
+        outline: none;
+        width: 100%;
+        padding: 0 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        height: 2rem;
+        color: #5d1a0d;
+
+        &.ng-invalid.ng-touched {
+          @apply maya-ring-2 maya-ring-opacity-70 maya-ring-red-500;
+        }
+
+        &.ng-valid.ng-touched {
+          @apply maya-ring-2 maya-ring-opacity-70 maya-ring-green-500;
+        }
+      }
+    }
+  }
+}

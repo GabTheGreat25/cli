@@ -1,0 +1,11 @@
+.option-title {
+  @apply maya-text-xl maya-font-medium;
+  color: #5d1a0d;
+}
+
+.option-wrapper {
+  @apply maya-text-sm maya-font-medium;
+  color: #5d1a0d;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}

@@ -1,0 +1,25 @@
+<navbar>
+  <div class="navbar-container" navbar-body>
+    <div class="navbar-name">
+      <span navbar-title>
+        <navbar-name [title]="title"></navbar-name>
+      </span>
+    </div>
+    <div class="navbar-wrapper">
+      <span navbar-content>
+        <navbar-dashboard-button [addButton]="addButton" [dashboardButton]="dashboardButton"></navbar-dashboard-button>
+      </span>
+      <span navbar-content>
+        <navbar-search [border]="border" [color]="color" [textColor]="textColor"></navbar-search>
+      </span>
+    </div>
+  </div>
+</navbar>
+
+<div class="dependency-container">
+  <card>
+    <div card-wrapper>
+      <extension></extension>
+    </div>
+  </card>
+</div>

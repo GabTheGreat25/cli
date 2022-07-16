@@ -1,0 +1,34 @@
+<pop-up *ngIf="isOpen" [title]="title" (onClose)="close()">
+  <div popup-body>
+    <pop-up-input [icon]="icon" [infoTitle]="infoTitle" [title]="popupTitle" [info]="info"></pop-up-input>
+  </div>
+  <div class="option-container" popup-body>
+    <pop-up-options></pop-up-options>
+  </div>
+  <div popup-buttons>
+    <pop-up-clear [clearTitle]="clearTitle"></pop-up-clear>
+  </div>
+</pop-up>
+
+<reminder [content]="content"></reminder>
+
+<section class="select-preset">
+  <p class="select-title">Select a preset</p>
+  <div *ngFor="let radio of radios">
+    <label class="select-container"
+      >{{ radio.name }}
+      <p class="select-info">{{ radio.content }}</p>
+      <input id="{{ radio.name }}" [value]="radio.name" type="radio" name="radio" class="select-radio" />
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</section>
+
+<new-project-button
+  (onBack)="back()"
+  [backTitle]="backTitle"
+  [nextTitle]="nextTitle"
+  [backIcon]="backIcon"
+  [nextIcon]="nextIcon"
+  (click)="open()"
+></new-project-button>

@@ -1,0 +1,78 @@
+<navbar>
+  <div navbar-body>
+    <navbar-dashboard></navbar-dashboard>
+  </div>
+</navbar>
+
+<div class="home-container">
+  <div>
+    <card>
+      <div class="welcome-container" card-wrapper>
+        <p class="welcome-title">Welcome tips</p>
+        <div class="welcome-wrapper">
+          <div class="logo-container">
+            <img [src]="mayaBird" alt="mayaBird" />
+            <p class="logo-title">A simple <span class="node">Node.js</span> Framework for creating REST API server side applications using typescript</p>
+          </div>
+          <div class="sub-container">
+            <p class="sub-title">Easy to use</p>
+            <ul class="unordered">
+              <li>We developed this framework with adaptability as the priority.</li>
+              <li>Beginner-friendly and accessible for any skill level.</li>
+              <li>Assists in making complex routes through built-in CLI.</li>
+            </ul>
+          </div>
+          <div class="sub-container">
+            <p class="sub-title">Simple yet Powerful</p>
+            <ul class="unordered">
+              <li>
+                When building production quality RESTful applications, managing your routes becomes the priority. We as developers want to simplify our
+                workflow.
+              </li>
+              <li>Gives declarative ways of defining routes.</li>
+              <li>Simplifies adding route files through our CLI.</li>
+              <li>Enables sharing business logic using services.</li>
+              <li>Creates routes using method declaration.</li>
+              <li>Near-independent from typescript declarations unlike most frameworks.</li>
+            </ul>
+          </div>
+          <div class="btn-container">
+            <div class="close-btn">
+              <i class="las la-check icon"></i>
+              <button class="btn-cancel">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </card>
+  </div>
+  <div class="port-container">
+    <card>
+      <div class="port-wrapper" card-wrapper>
+        <p class="port-title">Kill Port</p>
+        <div class="electric-container">
+          <div class="electric-wrapper">
+            <img class="electric" [src]="electric" alt="electric" />
+          </div>
+          <p class="electric-title">Ready to kill</p>
+        </div>
+        <div class="network-container">
+          <input type="text" class="network-text" placeholder="Enter a network port" />
+          <div class="btn-electric">
+            <img class="electric" [src]="electric" alt="electric" />
+            <button class="btn-title">Kill</button>
+          </div>
+        </div>
+      </div>
+    </card>
+    <card>
+      <div class="task-container" card-wrapper>
+        <p class="task-title">Run Task</p>
+        <div class="task-wrapper">
+          <i class="las la-cog wheel"></i>
+          <button class="btn-wheel">Configure Widget</button>
+        </div>
+      </div>
+    </card>
+  </div>
+</div>

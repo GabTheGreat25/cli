@@ -1,0 +1,61 @@
+{
+  "name": "@mayajs/cli",
+  "version": "0.7.5",
+  "description": "MayaJS CLI is a command line interface for MayaJS. Its primary purpose is to assist developers with building MayaJS projects. MayaJS CLI allows you to generate and serving MayaJS project as well as generate MayaJS files (e.g. controllers, services and models).",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib",
+    "templates/common",
+    "templates/templates.json",
+    "public"
+  ],
+  "bin": {
+    "maya": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf index.js && rimraf *.tgz && rimraf *.d.ts && rimraf lib && rimraf json",
+    "start": "nodemon --watch src --watch public --exec \"npm run clean && wait-on -r index.js && tsc -w\"",
+    "ui": "cd ui && npm run watch",
+    "version": "node scripts/version.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayajs/cli.git"
+  },
+  "keywords": [
+    "cli",
+    "mayajs"
+  ],
+  "author": "Mark Anthony C. Ignacio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mayajs/cli/issues"
+  },
+  "homepage": "https://github.com/mayajs/cli#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "chokidar": "^3.5.3",
+    "commander": "^3.0.0",
+    "figlet": "^1.2.4",
+    "inquirer": "^8.1.1",
+    "listr2": "^3.13.3",
+    "shelljs": "^0.8.5",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/figlet": "^1.2.0",
+    "@types/inquirer": "^7.3.2",
+    "@types/listr": "^0.14.2",
+    "@types/node": "^12.20.13",
+    "@types/shelljs": "^0.8.8",
+    "nodemon": "^2.0.16",
+    "ts-node": "^8.10.2",
+    "wait-on": "^6.0.1"
+  }
+}

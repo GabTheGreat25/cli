@@ -1,0 +1,105 @@
+.sidebar {
+  z-index: 2;
+  @apply maya-bg-white;
+  padding: 5rem 0 4rem 0;
+  height: 100%;
+  position: sticky;
+  box-shadow: 0px 0px 20px 0px rgba(24, 24, 24, 0.2);
+  width: fit-content;
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  gap: 4.5rem;
+
+  @screen lg {
+    gap: 3rem;
+  }
+
+  .logo-container {
+    padding: 0 2rem 0 1rem;
+
+    @screen lg {
+      padding: 0 3rem 0 2rem;
+    }
+
+    @screen xl {
+      padding: 0 5rem 0 4rem;
+    }
+
+    .logo {
+      width: 100%;
+    }
+  }
+
+  .tabs {
+    padding: 0.5rem 1.2rem;
+    display: block;
+    cursor: pointer;
+
+    @screen lg {
+      padding: 0.5rem 1.5rem;
+    }
+
+    @screen xl {
+      padding: 0.5rem 2.25rem;
+    }
+
+    .tab-items {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      padding: 0.75rem 1.2rem;
+      border-radius: 0.35rem;
+      @apply maya-font-semibold;
+      box-shadow: 0px 0px 10px 0px rgba(24, 24, 24, 0.2);
+      width: 100%;
+
+      @screen lg {
+        grid-template-columns: 3rem 1fr;
+        padding: 0.75rem 2rem;
+      }
+
+      @screen xl {
+        padding: 0.75rem 3.5rem;
+      }
+
+      &:hover {
+        @apply maya-font-bold;
+        background-color: #e02f15;
+        color: white;
+
+        .icon {
+          color: white;
+        }
+      }
+
+      .icon {
+        @apply maya-text-primary-neutral-dark;
+        font-size: 1.5rem;
+
+        @screen lg {
+          font-size: 2rem;
+        }
+      }
+
+      .tab-title {
+        @apply maya-font-light;
+        font-size: 0.9rem;
+        padding-top: 0.15rem;
+
+        @screen lg {
+          padding-top: 0.25rem;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .active {
+      @apply maya-font-bold;
+      background: #e02f15;
+      color: white;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+}

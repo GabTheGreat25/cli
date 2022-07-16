@@ -1,0 +1,33 @@
+.title {
+  display: grid;
+  grid-template-columns: 6rem auto;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 0.5rem;
+  padding-left: 1rem;
+
+  @screen lg {
+    grid-template-columns: 4.75rem auto;
+  }
+
+  @screen xl {
+    grid-template-columns: 4rem auto;
+    justify-items: start;
+    padding: 0.5rem;
+  }
+
+  .title-header {
+    @apply maya-font-bold;
+    color: #b40f00;
+    font-size: 1.2rem;
+
+    @screen lg {
+      font-size: 1.3rem;
+    }
+
+    @screen xl {
+      font-size: 1.4rem;
+    }
+  }
+}

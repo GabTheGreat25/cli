@@ -1,0 +1,117 @@
+.feature-container {
+  @apply maya-pb-8 maya-px-8;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  width: 100%;
+
+  .feature-list {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(4rem, 1fr));
+    grid-column: 2/3;
+    gap: 1rem;
+    padding-top: 1rem;
+
+    .feature-card {
+      background-color: #ffffff;
+      max-height: 100%;
+      width: 100%;
+      border: 1px solid #b40f00;
+      box-shadow: 5px 5px 10px 2px rgba(255, 63, 63, 0.2);
+      border-radius: 0.5rem;
+      display: grid;
+      align-content: center;
+
+      .card-container {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 2fr 1fr;
+        padding: 0.5rem 2rem;
+
+        @screen lg {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .feature-title {
+          @apply maya-text-sm maya-font-bold maya-text-primary-neutral-dark;
+
+          @screen lg {
+            @apply maya-text-lg;
+          }
+
+          @screen xl {
+            @apply maya-text-2xl;
+          }
+        }
+
+        .feature-info {
+          @apply maya-text-sm maya-font-light maya-text-primary-neutral-dark;
+
+          @screen xl {
+            font-size: 1rem;
+          }
+
+          .info-btn {
+            @apply maya-font-light;
+            color: #e02f15;
+            text-decoration: underline;
+          }
+        }
+
+        .switch-container {
+          display: grid;
+          justify-content: end;
+          padding-top: 0.5rem;
+
+          @screen xl {
+            padding-top: 1rem;
+          }
+
+          .switch {
+            position: relative;
+            display: inline-block;
+            width: 3.5rem;
+            height: 1.45rem;
+
+            .checkbox {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #dedede;
+              transition: 0.4s;
+              border-radius: 2.25rem;
+            }
+
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 2rem;
+              width: 2rem;
+              right: 1.5rem;
+              bottom: -0.25rem;
+              background-color: #636363;
+              transition: 0.4s;
+              border-radius: 50%;
+            }
+
+            input:checked + .slider {
+              background-color: #e02f15;
+            }
+
+            input:checked + .slider:before {
+              transform: translateX(1.9rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}

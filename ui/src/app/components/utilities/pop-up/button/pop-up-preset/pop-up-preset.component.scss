@@ -1,0 +1,40 @@
+.popup-btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  .save-btn {
+    gap: 2rem;
+    width: 100%;
+    @apply maya-px-7 maya-py-1 maya-font-medium;
+    font-weight: 300;
+    color: white;
+    background-color: #636363;
+    padding-top: 0.4rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+
+    @screen lg {
+      padding-top: 0.3rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .preset-btn {
+    gap: 2rem;
+    width: 100%;
+    @apply maya-px-7 maya-py-1 maya-font-medium;
+    color: white;
+    background-color: #212529;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding-top: 0.4rem;
+    font-size: 0.8rem;
+
+    @screen lg {
+      padding-top: 0.3rem;
+      font-size: 1.1rem;
+    }
+  }
+}

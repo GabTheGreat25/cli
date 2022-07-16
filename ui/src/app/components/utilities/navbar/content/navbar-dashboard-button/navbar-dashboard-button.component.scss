@@ -1,0 +1,25 @@
+.navbar-dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 1rem;
+
+  .navbar-dashboard-button {
+    @apply maya-px-8 maya-py-3 maya-font-medium;
+    display: grid;
+    width: fit-content;
+    border: 0.14rem solid #636363;
+    color: #636363;
+    text-align: center;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+
+    @screen lg {
+      @apply maya-px-2 maya-py-3 maya-font-medium;
+      font-size: 1rem;
+    }
+
+    @screen xl {
+      @apply maya-px-5 maya-py-3 maya-font-medium;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.body {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 0 1fr;
+
+  .sidebar {
+    height: 100%;
+  }
+
+  .router {
+    height: 100%;
+  }
+}

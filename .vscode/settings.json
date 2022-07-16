@@ -1,0 +1,10 @@
+{
+  "css.customData": ["./ui/css.custom.json"],
+  "prettier.printWidth": 160,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "es5",
+  "prettier.bracketSpacing": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

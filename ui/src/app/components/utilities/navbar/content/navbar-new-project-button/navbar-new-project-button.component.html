@@ -1,0 +1,8 @@
+<div class="new-project-container">
+  <ng-container *ngFor="let button of buttons">
+    <button [routerLink]="'/new-project/' + button.route" routerLinkActive="active" class="btn-new-project">
+      <i class="la-lg" [ngClass]="[button.icon]"></i>
+      {{ button.name }}
+    </button>
+  </ng-container>
+</div>

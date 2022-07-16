@@ -1,0 +1,13 @@
+.project-container {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 4.5rem 60vh;
+  padding: 2rem 0;
+
+  .choose-file-container {
+    padding-bottom: 1.5rem;
+    grid-column: 2/3;
+    display: grid;
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,69 @@
+.option-container {
+  padding-top: 1rem;
+}
+
+.select-preset {
+  @apply maya-grid;
+  justify-items: center;
+  display: relative;
+
+  .select-title {
+    padding-right: 6rem;
+    padding-bottom: 1rem;
+    color: #5d1a0d;
+    font-size: 1.75rem;
+  }
+
+  .select-container {
+    @apply maya-font-bold maya-text-primary-neutral-dark;
+    display: block;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+
+    .select-info {
+      @apply maya-text-sm maya-text-primary-neutral-dark maya-font-light;
+    }
+
+    .select-radio {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    height: 1.75rem;
+    width: 1.65rem;
+    border: 0.15rem solid #e02f15;
+    border-radius: 50%;
+  }
+
+  .select-container input:checked ~ .checkmark {
+    background-color: #e02f15;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .select-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .select-container .checkmark:after {
+    top: 0.45rem;
+    left: 0.42rem;
+    width: 0.55rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: white;
+  }
+}

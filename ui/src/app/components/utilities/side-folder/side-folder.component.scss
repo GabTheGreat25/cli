@@ -1,0 +1,88 @@
+.side-folder {
+  @apply maya-bg-primary-neutral-accent;
+  padding: 1rem 0 7rem 0;
+  height: 100%;
+  position: sticky;
+  width: fit-content;
+
+  .side-tabs {
+    padding: 0.5rem 1.2rem;
+    display: block;
+    cursor: pointer;
+
+    @screen lg {
+      padding: 0.5rem 1.5rem;
+    }
+
+    @screen xl {
+      padding: 0.5rem 2.25rem;
+    }
+
+    .side-tab-items {
+      display: grid;
+      grid-template-rows: auto;
+      padding: 0.75rem 1.2rem;
+      border-radius: 0.35rem;
+      @apply maya-font-semibold;
+      box-shadow: 0px 0px 10px 0px rgba(24, 24, 24, 0.2);
+      width: 100%;
+      border: 0.1rem solid #dedede;
+
+      @screen lg {
+        padding: 0.75rem 2rem;
+      }
+
+      @screen xl {
+        padding: 0.75rem 3.5rem;
+      }
+
+      &:hover {
+        border: 0.1rem solid #e02f15;
+        color: #e02f15;
+
+        .side-icon {
+          color: #e02f15;
+        }
+      }
+
+      .side-icon-container {
+        display: grid;
+        grid-template-columns: 3rem 1fr;
+      }
+
+      .side-icon {
+        @apply maya-text-primary-neutral-dark;
+        font-size: 1.5rem;
+
+        @screen lg {
+          font-size: 2rem;
+        }
+      }
+
+      .side-tab-title {
+        @apply maya-font-light;
+        font-size: 0.9rem;
+        padding-top: 0.15rem;
+
+        @screen lg {
+          padding-top: 0.25rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      .side-tab-content {
+        @apply maya-font-light maya-text-sm maya-pt-1;
+      }
+    }
+
+    .active {
+      @apply maya-font-bold;
+      border: 0.15rem solid #e02f15;
+      color: #e02f15;
+
+      .side-icon {
+        color: #e02f15;
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+.home-container {
+  height: fit-content;
+
+  .home-wrapper {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    height: 100%;
+    width: 100%;
+
+    .list {
+      display: grid;
+      grid-template-rows: repeat(auto-fill, minmax(4rem, 1fr));
+      grid-column: 2/3;
+      gap: 1rem;
+      padding-top: 1rem;
+
+      .card {
+        background-color: #ffffff;
+        max-height: max-content;
+        width: 100%;
+        border: 1px solid #b40f00;
+        box-shadow: 5px 5px 10px 2px rgba(255, 63, 63, 0.2);
+        border-radius: 1rem;
+        display: grid;
+        align-content: center;
+
+        .card-container {
+          display: grid;
+          gap: 0.5rem;
+          grid-template-columns: min-content auto max-content;
+          padding: 0.5rem 2rem;
+
+          .icon-wrapper {
+          }
+
+          .app-info {
+            @apply maya-text-primary-neutral-dark maya-font-bold;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+
+            .app-name {
+              color: #d11403;
+            }
+
+            .sub-info {
+              @apply maya-text-primary-neutral maya-font-semibold;
+              font-size: 0.75rem;
+              margin-left: 0.5rem;
+            }
+          }
+
+          .home-actions {
+            @apply maya-grid maya-justify-end maya-px-6;
+          }
+        }
+      }
+
+      .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.9rem;
+        align-content: center;
+        justify-content: center;
+        padding: 0.5rem;
+        color: #d11403;
+
+        .round {
+          border-radius: 0.5rem;
+          background-color: rgba(180, 15, 0, 0.2);
+          padding: 0.25rem;
+        }
+
+        .outline {
+          border-radius: 0.5rem;
+          border: 0.1rem solid rgba(209, 20, 3, 0.5);
+          background-color: transparent;
+          padding: 0.15rem;
+        }
+      }
+    }
+  }
+}
+
+.create-container {
+  @apply maya-grid;
+  align-items: center;
+  height: 80vh;
+
+  @screen xl {
+    height: 88vh;
+  }
+
+  .create-wrapper {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0 0.2rem 0.4rem 0.1rem #00000026;
+    @apply maya-grid maya-grid-flow-row maya-rounded-xl maya-mx-auto maya-text-center maya-p-12;
+
+    @screen lg {
+      width: 60%;
+    }
+
+    @screen xl {
+      width: 40%;
+    }
+
+    .create-title {
+      @apply maya-font-light;
+      font-size: 2rem;
+      color: #5d1a0d;
+      padding-bottom: 0.5rem;
+    }
+
+    .create-info {
+      @apply maya-text-primary-neutral-dark maya-font-light;
+      text-align: center;
+      font-size: 1.12rem;
+      line-height: 1.5rem;
+
+      .sub-info {
+        @apply maya-font-semibold;
+      }
+    }
+
+    .add-logo {
+      display: grid;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+
+      .logo-file {
+        height: 5rem;
+      }
+    }
+
+    .btn-container {
+      @apply maya-grid-flow-col maya-py-4;
+      display: grid;
+      justify-content: center;
+
+      .btn-create {
+        @apply maya-font-light;
+        padding: 0 1rem;
+        color: white;
+        background-color: #e02f15cc;
+        display: grid;
+        grid-template-columns: 2rem 1fr;
+
+        .plus {
+          font-size: 1.75rem;
+        }
+
+        .btn-title {
+          @apply maya-pt-2;
+        }
+      }
+    }
+  }
+}

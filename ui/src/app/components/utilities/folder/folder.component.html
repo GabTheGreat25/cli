@@ -1,0 +1,12 @@
+<div class="project-wrapper" *ngFor="let create of creates">
+  <div class="project-card">
+    <div class="card-container">
+      <div class="icon-container">
+        <button>
+          <img [src]="squareFolder" alt="squareFolder" />
+        </button>
+        <p class="icon-title">{{ create.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

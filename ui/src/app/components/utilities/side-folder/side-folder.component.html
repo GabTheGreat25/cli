@@ -1,0 +1,17 @@
+<div class="side-folder">
+  <ul>
+    <ng-container *ngFor="let tab of tabs">
+      <li class="side-tabs">
+        <div class="side-tab-items">
+          <div>
+            <div class="side-icon-container">
+              <i class="side-icon" [ngClass]="[tab.icon]"></i>
+              <p class="side-tab-title">{{ tab.name }}</p>
+            </div>
+          </div>
+          <h5 class="side-tab-content">{{ tab.subName }}</h5>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>

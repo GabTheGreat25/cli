@@ -1,0 +1,17 @@
+<div class="sidebar">
+  <div class="logo-container">
+    <img class="logo" [src]="mayaBird" alt="mayaBird" />
+  </div>
+  <ul>
+    <ng-container *ngFor="let tab of tabs">
+      <li class="tabs">
+        <div class="tab-items" [routerLink]="'/dashboard/' + tab.route" routerLinkActive="active">
+          <div>
+            <i class="icon" [ngClass]="[tab.icon]"></i>
+          </div>
+          <p class="tab-title">{{ tab.name }}</p>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>

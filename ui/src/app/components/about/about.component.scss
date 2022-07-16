@@ -1,0 +1,74 @@
+.about-container {
+  background-color: black;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  padding: 2rem;
+
+  .about-wrapper {
+    color: white;
+    display: grid;
+    min-height: 100%;
+    grid-template-rows: 6rem 6rem 10rem 5rem 8rem 1fr;
+    padding: 5rem 0;
+    justify-content: center;
+    align-items: center;
+
+    @screen lg {
+      grid-template-rows: 6rem 3rem 10rem 5rem 4rem 1fr;
+    }
+
+    .about-title {
+      padding-left: 6rem;
+      font-size: 4rem;
+
+      @screen lg {
+        padding-left: 8rem;
+      }
+    }
+
+    .about-content {
+      padding-left: 6rem;
+      line-height: 1.8rem;
+      width: 90%;
+
+      @screen lg {
+        padding-left: 8rem;
+      }
+    }
+
+    .about-link {
+      padding-left: 6rem;
+      font-size: 2.75rem;
+      @screen lg {
+        padding-left: 8rem;
+      }
+    }
+
+    .btn-link-container {
+      @apply maya-grid-flow-col;
+      padding-left: 8.5rem;
+      display: grid;
+      gap: 3.5rem;
+      justify-content: start;
+
+      .btn-link {
+        padding: 0.75rem 3rem;
+        border-radius: 0.25rem;
+        background-color: #636363;
+      }
+    }
+
+    .back-container {
+      display: grid;
+      place-items: center;
+      padding-top: 4rem;
+
+      .btn-back {
+        padding: 0.75rem 3rem;
+        border-radius: 0.25rem;
+        background-color: #e02f15;
+      }
+    }
+  }
+}

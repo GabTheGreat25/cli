@@ -1,0 +1,28 @@
+<div class="extension-container" *ngFor="let extension of extensions">
+  <p class="extension-title">{{ extension.title }}</p>
+  <div class="logo-container">
+    <img class="logo" [src]="plugin" alt="extension" />
+    <div class="title-container">
+      <p class="logo-title">{{ extension.service }}</p>
+      <div class="info-container">
+        <div>
+          <p>{{ extension.version }}</p>
+        </div>
+        <div class="icon-container">
+          <div class="icon-wrapper">
+            <i class="las la-star"></i>
+            <p>{{ extension.official }}</p>
+          </div>
+          <div class="icon-wrapper">
+            <img [src]="checkbox" alt="checkbox" />
+            <p>{{ extension.install }}</p>
+          </div>
+        </div>
+        <div class="local-container">
+          <p class="info-title">{{ extension.local }}</p>
+          <button class="more-info">{{ extension.info }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

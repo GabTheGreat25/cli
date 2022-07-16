@@ -1,0 +1,10 @@
+.name-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 1rem 2rem;
+
+  .name-title {
+    @apply maya-text-2xl maya-font-semibold;
+    color: #636363;
+  }
+}

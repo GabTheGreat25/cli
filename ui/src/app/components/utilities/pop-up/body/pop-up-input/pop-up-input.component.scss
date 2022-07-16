@@ -1,0 +1,45 @@
+.sub-info {
+  @apply maya-grid-flow-row;
+  display: grid;
+  gap: 0.25rem;
+
+  .sub-title {
+    @apply maya-font-medium;
+    font-size: 1rem;
+  }
+
+  .form-container {
+    background: rgba(224, 47, 21, 0.1);
+    border-bottom: 0.2rem solid black;
+    padding: 0.1rem 1rem;
+    display: grid;
+    grid-template-columns: 5rem auto;
+
+    .logo {
+      padding-left: 2rem;
+      padding-top: 1.25rem;
+    }
+
+    .info-form-control {
+      position: relative;
+      outline: none;
+      overflow: visible;
+      text-align: left;
+      box-shadow: none;
+      background: rgba(224, 48, 21, 0);
+      border-bottom: 0.1rem solid black;
+      border: none;
+      height: 4rem;
+      padding-bottom: 0.15rem;
+      font-size: 1.2rem;
+
+      &.ng-invalid.ng-touched {
+        @apply maya-ring-2 maya-ring-opacity-70 maya-ring-red-500;
+      }
+
+      &.ng-valid.ng-touched {
+        @apply maya-ring-2 maya-ring-opacity-70 maya-ring-green-500;
+      }
+    }
+  }
+}

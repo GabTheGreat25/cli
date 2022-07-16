@@ -1,0 +1,41 @@
+.search {
+  padding: 0.25rem 0.5rem;
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  height: 100%;
+
+  @screen md {
+    padding: 0.9rem;
+    grid-row: 2/2;
+    grid-column: 2/2;
+  }
+
+  @screen xl {
+    grid-column: 3/4;
+  }
+
+  .search-bar {
+    position: relative;
+    width: 100%;
+
+    .icon-search {
+      position: absolute;
+      color: #b40f00;
+      left: 0.8rem;
+      top: 0.2rem;
+    }
+
+    .search-input {
+      @apply maya-font-light;
+      width: 100%;
+      color: #b40f00;
+      height: min-content;
+      padding-left: 2rem;
+      font-size: 1.2rem;
+      border: 0.1rem solid #b40f00;
+      border-radius: 0.95rem;
+      outline: none;
+    }
+  }
+}

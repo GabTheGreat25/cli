@@ -1,0 +1,67 @@
+.navbar-header {
+  z-index: 1;
+  position: sticky;
+  box-shadow: 0px 0px 30px 0px rgba(24, 24, 24, 0.2);
+  width: 100%;
+  background-color: #fefefe;
+
+  .navbar-container {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+
+    .card {
+      grid-column: 2/3;
+      padding: 0.75rem 0;
+
+      .card-container {
+        background-color: #ffffff;
+        max-height: fit-content;
+        width: 100%;
+        border: none;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        gap: 0.5rem;
+
+        @screen md {
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: repeat(2, 1fr);
+        }
+
+        @screen xl {
+          grid-template-columns: 1fr 2fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 1.5rem;
+        }
+
+        .title {
+          display: grid;
+          grid-template-columns: 3rem 9rem;
+          justify-items: center;
+          align-items: center;
+          padding: 0.5rem;
+          padding-left: 1rem;
+
+          @screen lg {
+            grid-template-columns: minmax(auto, 3rem) 12rem;
+          }
+
+          .title-header {
+            @apply maya-font-bold;
+            font-size: 1rem;
+            color: #b40f00;
+            padding-left: 1rem;
+
+            @screen lg {
+              @apply maya-font-semibold;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

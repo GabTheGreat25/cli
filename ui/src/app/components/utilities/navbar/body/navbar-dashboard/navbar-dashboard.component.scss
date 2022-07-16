@@ -1,0 +1,31 @@
+.navbar-dashboard-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 25% 1fr auto;
+  align-items: center;
+
+  justify-items: end;
+  @screen lg {
+    grid-template-columns: 28% 1fr auto;
+    justify-items: start;
+  }
+
+  @screen xl {
+    grid-template-columns: 26% 1fr auto;
+  }
+
+  .navbar-dashboard-wrapper {
+    display: grid;
+    grid-column: 2/3;
+
+    .navbar-dashboard-title {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .dropdown-container {
+    display: grid;
+    padding: 0 2rem 0.6rem 2rem;
+    place-items: end;
+  }
+}

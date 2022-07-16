@@ -1,0 +1,61 @@
+<pop-up *ngIf="isOpen" [title]="title" (onClose)="close()">
+  <div popup-body>
+    <pop-up-question></pop-up-question>
+  </div>
+  <div popup-buttons>
+    <pop-up-clear [clearTitle]="clearTitle" (onBack)="back()"></pop-up-clear>
+  </div>
+</pop-up>
+<section class="detail-container">
+  <div class="detail-wrapper">
+    <h1 class="detail-title">Project Name</h1>
+    <div class="project-container">
+      <img class="logo" [src]="folder" alt="folder" />
+      <input form-control type="text" class="info-form-control" placeholder="Name" />
+    </div>
+    <div class="icon-container">
+      <p class="icon-title">C:Users/gary/code/mu-mayajs</p>
+      <div class="icon-wrapper">
+        <button>
+          <i class="las la-pencil-alt icon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="payment-container">
+      <label class="payment-title"
+        >Project Manager
+        <select class="dropdown">
+          <option selected disabled hidden>Default</option>
+          <option class="option">Option 1</option>
+          <option class="option">Option 2</option>
+          <option class="option">Last long option</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <p class="additional-title">Additional Options</p>
+      <div class="additional-container">
+        <p class="additional-info">Overwrite target folder if it exists</p>
+        <switch></switch>
+      </div>
+    </div>
+    <div>
+      <p class="additional-title">Git repository</p>
+      <div class="additional-container">
+        <p class="additional-info">Initialize git repository (recomended)</p>
+        <switch></switch>
+      </div>
+      <div class="form-container">
+        <input form-control type="text" class="additional-form-control" placeholder="Initial commit message (optional)" />
+      </div>
+    </div>
+  </div>
+</section>
+<new-project-button
+  (onNext)="next()"
+  [backTitle]="backTitle"
+  [nextTitle]="nextTitle"
+  [backIcon]="backIcon"
+  [nextIcon]="nextIcon"
+  (click)="open()"
+></new-project-button>

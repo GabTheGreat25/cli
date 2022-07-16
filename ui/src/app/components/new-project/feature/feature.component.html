@@ -1,0 +1,31 @@
+<reminder [content]="content"></reminder>
+
+<div class="feature-container" *ngFor="let feature of features">
+  <div class="feature-list">
+    <div class="feature-card">
+      <div class="card-container">
+        <div>
+          <h1 class="feature-title">{{ feature.title }}</h1>
+          <p class="feature-info">
+            {{ feature.content }}
+            <button class="info-btn">
+              {{ feature.moreInfo }}
+            </button>
+          </p>
+        </div>
+        <div class="switch-container">
+          <switch></switch>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<new-project-button
+  (onBack)="back()"
+  (onNext)="next()"
+  [backTitle]="backTitle"
+  [nextTitle]="nextTitle"
+  [backIcon]="backIcon"
+  [nextIcon]="nextIcon"
+></new-project-button>

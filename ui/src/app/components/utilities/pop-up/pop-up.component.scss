@@ -1,0 +1,54 @@
+:host {
+  display: grid;
+  position: fixed;
+  padding-top: 3rem;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.container {
+  border-radius: 2rem;
+  background-color: white;
+  padding: 1rem 2rem;
+
+  .wrapper {
+    padding: 1rem;
+
+    .title {
+      @apply maya-font-medium maya-text-2xl;
+      text-align: start;
+      padding-bottom: 2rem;
+    }
+
+    .feature-title {
+      @apply maya-text-primary-neutral-dark;
+    }
+
+    .btn-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding-top: 2.5rem;
+
+      .close-btn {
+        width: fit-content;
+        @apply maya-px-7 maya-py-1;
+        border: 0.14rem solid rgba(224, 47, 21, 0.2);
+        color: rgba(224, 47, 21, 0.2);
+        text-align: center;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+
+        @screen lg {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
